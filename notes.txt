@@ -1,0 +1,2 @@
+I want to play background music when I open the link -- colorblind by Mokita
+I want to have animated introduction on home page saying "Hi, I'm Evan"
