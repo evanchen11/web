@@ -1,18 +1,20 @@
 /* styles.css */
-body {
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    height: 100%;
+    margin: 0;
 }
 
-header {
+/* header {
     background-color: #333;
     color: white;
     padding: 10px 0;
     text-align: center;
-}
+} */
 
 nav a {
     color: white;
@@ -45,4 +47,108 @@ h2 {
     background-color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center */
+    align-items: center;    /* Horizontally center */
+    text-align: center;     /* Center text */
+    /* background-color:; /* Optional: change background color */  
+    position: relative;
+    max-width: 80%;
+    width: 1000px;
+    margin: auto;
+    /* border: 2px solid #ddd;
+    border-radius: 8px; */
+    overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    
+}
+
+/* Fade effect (for slideshow) */ 
+.fade {
+    animation: fade 3s ease-in-out infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+/* header intro animation */
+/* @keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#intro {
+    animation: slideIn 1s ease-out; Adjust duration and easing as needed */
+/* } */
+
+/* Style for the container */
+#intro {
+    display: inline-block; /* Make the container inline for accurate positioning */
+    overflow: hidden; /* Hide overflow to keep the animation clean */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Animated Text */
+#intro span {
+    display: inline-block;
+    opacity: 0;
+    animation: appear 1s forwards;
+}
+
+/* Keyframes for the letter appearance */
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Adding a delay for each letter */
+#intro span:nth-child(1) { animation-delay: 0.1s; }
+#intro span:nth-child(2) { animation-delay: 0.2s; }
+#intro span:nth-child(3) { animation-delay: 0.3s; }
+#intro span:nth-child(4) { animation-delay: 0.4s; }
+#intro span:nth-child(5) { animation-delay: 0.5s; }
+#intro span:nth-child(6) { animation-delay: 0.6s; }
+#intro span:nth-child(7) { animation-delay: 0.7s; }
+#intro span:nth-child(8) { animation-delay: 0.8s; }
+#intro span:nth-child(9) { animation-delay: 0.9s; }
+#intro span:nth-child(10) { animation-delay: 1.0s; }
+
+
+header {
+    background-image: url('images/trees2.png'); /* Path to your background image */
+    background-size: 100%; /* Cover the entire header */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 300px; /* Set the height of the header */
+    color: white; /* Ensure text is readable against the background */
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Optional: add padding around the content */
 }

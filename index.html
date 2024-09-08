@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Add the background music here -->
+    <audio autoplay loop">
+        <source src="/Users/evan/code/web/Mokita - colorblind (Lyrics).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <header>
-        <h1 id = "intro">Hello, I'm Evan</h1>
+        <h1 id = "intro">Evan Chen</h1>
         <nav>
             <!-- <a href="#about">About Me</a> -->
             <a href="projects.html">Projects</a>
@@ -27,12 +33,27 @@
             <!-- Project details go here -->
         </div>
     </section>
+    <!-- Slideshow Section -->
+    <section id="slideshow">
+        <!-- <h2>Slideshow</h2> -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/beach.png" style="width:90%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/casey.png" style="width:90%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/trees.png" style="width:90%">
+            </div>
+            <!-- Add more images as needed -->
+        </div>
+    </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: you@example.com</p>
+        <p>Email: evan.p.chen@gmail.com</p>
     </section>
-
     <script src="script.js"></script>
 </body>
 </html>
