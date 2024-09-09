@@ -1,0 +1,122 @@
+
+
+/* General Body Styles */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+}
+
+section {
+    text-align: center;
+}
+/* Navigation Links */
+nav a {
+    color: #666666;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+}
+
+/* Header for Projects */
+h2 {
+    color: #251f4b;
+}
+
+/* Intro Header Styles */
+#intro {
+    color: #040404;
+    font-size: 80px;
+    text-align: center;
+    display: inline-block;
+    /* overflow: hidden; */
+}
+
+/* Letter Appearance Delay */
+@keyframes appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Project List */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-list div {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Background */
+header {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+nav a {
+    color: #666666;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden; /* Ensures text does not overflow */
+    white-space: nowrap; /* Keeps the text in a single line */
+    border-right: .15em solid black; /* The blinking cursor effect */
+
+    /* animation: typing 4s steps(40, end), blink-caret .75s step-end infinite; */
+  }
+/*   
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  } */
+  
+  /* @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  } */
+  
+
+/* Keyframes for the blink-six-times animation */
+@keyframes blink-six-times {
+    0%, 100% { border-color: black; }
+    16.67%, 50%, 83.33% { border-color: transparent; }
+    33.33%, 66.67% { border-color: black; }
+}
+
+/* Apply the blink-six-times animation */
+.blinking-six-times {
+    animation: blink-six-times 2.5s steps(6, end);
+}

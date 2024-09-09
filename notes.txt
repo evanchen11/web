@@ -1,2 +1,19 @@
-I want to play background music when I open the link -- colorblind by Mokita
-I want to have animated introduction on home page saying "Hi, I'm Evan"
+I'm thinking about writing a blog to place my thoughts.
+This blog's purpose can be to encourage me to try new things that are outside of my comfort zone.
+Try new recipes, review music and books.
+talk about my day.
+Things like book reviews, nature photgraphy/videos.
+I think i'm gonna keep this website to myself for awhile, until it's fully done.
+
+
+Maybe in the music tab, I'll put a header paragraph talking about how i'll update this page with the music that I've been enjoying the most recently.
+And below that, put a couple songs and their album pictures. With a blurb for each song talking about what it means to me, if anything. or if i simply enjoy it.
+
+
+make inner thoughts font size same as passions for the headers
+
+TODO:
+change title to match header/intro
+Add a way to cut off long blog entries and add a read more button.
+After the text animation finishes in interests, let the media below start fading in 
+add a slideshow of interactive calendars, month by month.

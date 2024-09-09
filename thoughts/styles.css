@@ -1,0 +1,66 @@
+/* styles.css */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+    
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    padding: 50px; /* Adds space inside the section */
+}
+
+section p {
+    margin: 0px 0; /* Adds space above and below the paragraph */
+    max-width: 800px; /* Limits the width of the paragraph */
+    text-align: center; /* Ensures text inside the paragraph is centered */
+}
+
+#intro {
+    color: #040404;
+    font-size: 80px;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+/* Fade effect (for slideshow) */ 
+/* .fade {
+    animation: fade 3s ease-in-out infinite;
+} */
+
+/* @keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+/*  
+#intro {
+    display: inline-block; /* Make the container inline for accurate positioning */
+    /*overflow: hidden; /* Hide overflow to keep the animation clean */
+/*} */
+
+header {
+    background-size: contain; /* Cover the entire header */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 300px; /* Set the height of the header */
+    color: white; /* Ensure text is readable against the background */
+    text-align: center; /* Center the text horizontally */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    padding: 20px; /* Optional: add padding around the content */
+    
+}

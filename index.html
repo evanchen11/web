@@ -5,55 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!-- Add the background music here -->
-    <audio autoplay loop">
-        <source src="/Users/evan/code/web/Mokita - colorblind (Lyrics).mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
     <header>
-        <h1 id = "intro">Evan Chen</h1>
+        <h1 id="intro">Evan&nbsp;&nbsp;Chen</h1>
         <nav>
             <!-- <a href="#about">About Me</a> -->
-            <a href="projects.html">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="interests/interests.html">Recent</a>
+            <a href="thoughts/thoughts.html">Thoughts</a>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>My name is Evan. This is a personal project. Idk what I'm going to put on this website yet. We'll see where it takes me.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <!-- Project details go here -->
-        </div>
-    </section>
     <!-- Slideshow Section -->
     <section id="slideshow">
         <!-- <h2>Slideshow</h2> -->
         <div class="slideshow-container">
+            <!-- <div class="mySlides fade">
+                <img src="images/beach.png" style="width:60%">
+            </div> -->
             <div class="mySlides fade">
-                <img src="images/beach.png" style="width:90%">
+                <img src="images/casey.png" style="width:60%">
             </div>
             <div class="mySlides fade">
-                <img src="images/casey.png" style="width:90%">
+                <img src="images/trees.png" style="width:60%">
             </div>
             <div class="mySlides fade">
-                <img src="images/trees.png" style="width:90%">
+                <img src="images/yosemite.JPG" style="width:60%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/grandpa.png" style="width:60%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/costarica.jpg" style="width:60%">
             </div>
             <!-- Add more images as needed -->
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: evan.p.chen@gmail.com</p>
+    <!-- interactive calendar -->
+    <section id="calendar">
+        <h2 id="month">September</h2>
+        <div id="calendar-controls">
+            <button id="prev-month" class="arrow-btn">&#8249;</button> <!-- Left arrow -->
+            <div id="calendar-container"></div>
+            <button id="next-month" class="arrow-btn">&#8250;</button> <!-- Right arrow -->
+        </div>
     </section>
+
+    <footer>
+        <p>&copy; 2024 Evan</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
