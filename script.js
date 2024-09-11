@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(`Clicked date: ${date}`);
                 const sectionExists = await checkSectionExists(date);
                 if (sectionExists) {
-                    window.location.href = `/thoughts/thoughts.html#${date}`;
+                    window.location.href = `https://evanchen11.github.io/web/thoughts/thoughts.html#${date}`;
                 } else {
                     alert('Entry not found.');
                 }
