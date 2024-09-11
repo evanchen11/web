@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generateCalendarDays(currentMonth, currentYear);
 
     // Update the month display
-    monthElement.textContent = getMonthName(currentMonth);
+    monthElement.textContent = getMonthName(currentMonth) + " " + currentYear;
 
     // Add event listeners to the month navigation buttons
     prevMonthButton.addEventListener('click', () => {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentYear--;
         }
         generateCalendarDays(currentMonth, currentYear);
-        monthElement.textContent = getMonthName(currentMonth);
+        monthElement.textContent = getMonthName(currentMonth) + " " + currentYear;
     });
 
     nextMonthButton.addEventListener('click', () => {
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentYear++;
         }
         generateCalendarDays(currentMonth, currentYear);
-        monthElement.textContent = getMonthName(currentMonth);
+        monthElement.textContent = getMonthName(currentMonth) + " " + currentYear;
     });
 
     // Function to get the month name from a 0-based index

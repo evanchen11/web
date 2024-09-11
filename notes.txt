@@ -20,10 +20,12 @@ There's probably a better way to do this, but I can't be bothered to look. I'm p
 
 TODO:
 change homepage slideshow to video
+add animation to calendar
 change title to match header/intro
-Add a way to cut off long blog entries and add a read more button.
 After the text animation finishes in interests, let the media below start fading in 
-add a slideshow of interactive calendars, month by month.
+Add a way to cut off long blog entries and add a read more button.
+add a way to differentiate on the calendar which dates have entries ... maybe a dot, or a filled in div.
+each song blurb can talk about my favorite memory that I associate to that song.
 
 
 

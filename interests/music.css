@@ -37,13 +37,14 @@ header {
 
 /* Main Section Styles */
 main {
-    padding: 20px;
+    padding: 50px;
 }
 .song-list {
-    transform: translateX(80px); /* adjust the value to your liking */
+    transform: translateX(70px); /* adjust the value to your liking */
   }
 /* Song Box Styles */
 .song-box {
+    margin-bottom: 10px;
     background-color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -91,12 +92,8 @@ main {
     pointer-events: none !important;
     transition: none;
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    height: 100px;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-  }
+
+}
   
 /* .song-box:not(.image-only) img {
 
