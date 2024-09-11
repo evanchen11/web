@@ -138,7 +138,7 @@ async function checkSectionExists(date) {
     const sectionId = date; // Assumes section ID matches the date format
     console.log(sectionId)
     try {
-        const response = await fetch('/thoughts/thoughts.html');
+        const response = await fetch('https://evanchen11.github.io/web/thoughts/thoughts.html');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
