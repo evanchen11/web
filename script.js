@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const calendarContainer = document.getElementById('calendar-container');
+    const monthElement = document.getElementById('month');
+    const prevMonthButton = document.getElementById('prev-month');
+    const nextMonthButton = document.getElementById('next-month');
+
+    let currentMonth = 8; // September (0-based index)
+    let currentYear = 2024;
 
     // Generate calendar headers (days of the week)
     const headers = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -47,97 +53,84 @@ document.addEventListener('DOMContentLoaded', () => {
         calendarContainer.appendChild(headerElement);
     });
 
-    // Generate calendar days (for simplicity, we'll generate a static month)
-    for (let day = 1; day <= 30; day++) { // Adjust the number of days as needed
-        const dayElement = document.createElement('div');
-        dayElement.classList.add('date');
-        dayElement.textContent = day;
-        dayElement.dataset.date = `${String(9).padStart(2, '0')}.${String(day).padStart(2, '0')}.2024`; // Format date (mm.dd.yyyy)
-        dayElement.addEventListener('click', async (event) => {
-            const date = event.target.dataset.date;
-            console.log(`Clicked date: ${date}`);
-            const sectionExists = await checkSectionExists(date);
-            if(sectionExists) {
-                window.location.href = `/thoughts/thoughts.html#${date}`;
-            }
-            else {
-                alert('Entry not found.');
-            }
-            // window.location.href = "/Users/evan/code/web/thoughts/thoughts.html"; // Modify with your blog URL structure
+    // Function to generate calendar days for a given month
+    function generateCalendarDays(month, year) {
+        // Clear existing calendar days
+        calendarContainer.innerHTML = '';
+        headers.forEach(header => {
+            const headerElement = document.createElement('div');
+            headerElement.classList.add('day', 'header');
+            headerElement.textContent = header;
+            calendarContainer.appendChild(headerElement);
         });
-        calendarContainer.appendChild(dayElement);
+
+        // Get the number of days in the month
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        // Get the day of the week for the first day of the month (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+         const firstDayOfWeek = new Date(year, month, 1).getDay();
+
+
+        // Generate blank days for the previous month (if necessary)
+        for (let i = 0; i < firstDayOfWeek; i++) {
+            const blankDayElement = document.createElement('div');
+            blankDayElement.classList.add('blank');
+            calendarContainer.appendChild(blankDayElement);
+        }
+
+        // Generate calendar days
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayElement = document.createElement('div');
+            dayElement.classList.add('date');
+            dayElement.textContent = day;
+            dayElement.dataset.date = `${String(month + 1).padStart(2, '0')}.${String(day).padStart(2, '0')}.${year}`; // Format date (mm.dd.yyyy)
+            dayElement.addEventListener('click', async (event) => {
+                const date = event.target.dataset.date;
+                console.log(`Clicked date: ${date}`);
+                const sectionExists = await checkSectionExists(date);
+                if (sectionExists) {
+                    window.location.href = `/thoughts/thoughts.html#${date}`;
+                } else {
+                    alert('Entry not found.');
+                }
+            });
+            calendarContainer.appendChild(dayElement);
+        }
+    }
+
+    // Generate the initial calendar
+    generateCalendarDays(currentMonth, currentYear);
+
+    // Update the month display
+    monthElement.textContent = getMonthName(currentMonth);
+
+    // Add event listeners to the month navigation buttons
+    prevMonthButton.addEventListener('click', () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        generateCalendarDays(currentMonth, currentYear);
+        monthElement.textContent = getMonthName(currentMonth);
+    });
+
+    nextMonthButton.addEventListener('click', () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        generateCalendarDays(currentMonth, currentYear);
+        monthElement.textContent = getMonthName(currentMonth);
+    });
+
+    // Function to get the month name from a 0-based index
+    function getMonthName(monthIndex) {
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        return monthNames[monthIndex];
     }
 });
-// document.addEventListener('DOMContentLoaded', () => {
-//     const calendarContainer = document.getElementById('calendar-container');
-//     const monthTitle = document.getElementById('month-title');
-//     const prevMonthBtn = document.getElementById('prev-month');
-//     const nextMonthBtn = document.getElementById('next-month');
-
-//     let currentDate = new Date();
-
-//     function generateCalendar(date) {
-//         calendarContainer.innerHTML = ''; // Clear existing calendar
-//         const year = date.getFullYear();
-//         const month = date.getMonth();
-//         const daysInMonth = new Date(year, month + 1, 0).getDate();
-//         const headers = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-//         // Update month title
-//         monthTitle.textContent = `${date.toLocaleString('default', { month: 'long' })} ${year}`;
-
-//         // Generate calendar headers (days of the week)
-//         headers.forEach(header => {
-//             const headerElement = document.createElement('div');
-//             headerElement.classList.add('day', 'header');
-//             headerElement.textContent = header;
-//             calendarContainer.appendChild(headerElement);
-//         });
-
-//         // Generate blank spaces for the first week
-//         const firstDayOfMonth = new Date(year, month, 1).getDay();
-//         for (let i = 0; i < firstDayOfMonth; i++) {
-//             const emptyElement = document.createElement('div');
-//             emptyElement.classList.add('date', 'empty');
-//             calendarContainer.appendChild(emptyElement);
-//         }
-
-//         // Generate calendar days
-//         for (let day = 1; day <= daysInMonth; day++) {
-//             const dayElement = document.createElement('div');
-//             dayElement.classList.add('date');
-//             dayElement.textContent = day;
-//             dayElement.dataset.date = `${String(month + 1).padStart(2, '0')}.${String(day).padStart(2, '0')}.${year}`; // Format date (mm.dd.yyyy)
-//             dayElement.addEventListener('click', async (event) => {
-//                 const date = event.target.dataset.date;
-//                 console.log(`Clicked date: ${date}`);
-//                 const sectionExists = await checkSectionExists(date);
-//                 if (sectionExists) {
-//                     window.location.href = `/thoughts/thoughts.html#${date}`;
-//                 } else {
-//                     alert('Entry not found.');
-//                 }
-//             });
-//             calendarContainer.appendChild(dayElement);
-//         }
-//     }
-
-//     function updateCalendar(direction) {
-//         if (direction === 'prev') {
-//             currentDate.setMonth(currentDate.getMonth() - 1);
-//         } else if (direction === 'next') {
-//             currentDate.setMonth(currentDate.getMonth() + 1);
-//         }
-//         generateCalendar(currentDate);
-//     }
-
-//     // Initial calendar generation
-//     generateCalendar(currentDate);
-
-//     // Event listeners for navigation
-//     prevMonthBtn.addEventListener('click', () => updateCalendar('prev'));
-//     nextMonthBtn.addEventListener('click', () => updateCalendar('next'));
-// });
 
 
 // Function to check if a section exists in thoughts.html
@@ -160,3 +153,26 @@ async function checkSectionExists(date) {
         return false;
     }
 }
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('color-bars-container');
+
+    // Define the colors you want for the bars
+    const colors = ['#FF0000', '#00FF00', '#0000FF'];
+    
+    // Create and append color bars
+    colors.forEach((color, index) => {
+        const bar = document.createElement('div');
+        bar.classList.add('color-bar');
+        bar.style.top = `${index * 10}px`;
+        bar.style.backgroundColor = color;
+        container.appendChild(bar);
+
+        // Make the bars visible
+        setTimeout(() => {
+            bar.style.opacity = 1;
+        }, 100);
+    });
+});

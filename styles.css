@@ -1,5 +1,7 @@
 /* styles.css */
- body {
+body {
+    /* background: url("images/tvborder.jpeg") no-repeat center center; */
+    /*background-size: 1700px 1500px; /* Set specific width and height */
     font-family: 'Merriweather', serif;
     margin: 0;
     padding: 0;
@@ -194,3 +196,75 @@ nav a:hover {
 .arrow-btn:hover {
     color: #040404; /* Color on hover */
 }
+
+footer {
+    text-align: center;
+}
+
+
+.scan-lines {
+    position: relative;
+  }
+  
+  .scan-lines::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 50%);
+    background-size: 100% 4px; /* adjust the 4px value to change the line spacing */
+    pointer-events: none; /* prevent interference with clicks and hover effects */
+    animation: scan-lines-animation 6s linear infinite;
+}
+
+@keyframes scan-lines-animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+  .color-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 99%;
+    background-size: 1400% 100%; /* width of all colors combined */
+    animation: color-bar-animation 0.5s linear forwards;
+  }
+  
+  @keyframes color-bar-animation {
+    0% {
+      background-position: 0% 0%;
+    }
+    99% {
+      background-position: -500% 0%; /* move the background to the left */
+    }
+    100% {
+      background-image: none;
+    }
+  }
+  
+  .color-bar {
+    background-image: linear-gradient(to right, 
+      #000000 14.28%, /* black */
+      #0000ff 28.56%, /* blue */
+      #ff0000 42.84%, /* red */
+      #800080 57.12%, /* purple */
+      #00ff00 71.40%, /* green */
+      #00ffff 85.68%, /* neon blue */
+      #ffff00 100%, /* yellow */
+      #000000 114.28%, /* black */
+      #0000ff 128.56%, /* blue */
+      #ff0000 142.84%, /* red */
+      #800080 157.12%, /* purple */
+      #00ff00 171.40%, /* green */
+      #00ffff 185.68%, /* neon blue */
+      #ffff00 200%); /* yellow */
+  }
+
+  

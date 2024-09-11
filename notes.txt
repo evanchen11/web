@@ -10,10 +10,23 @@ Maybe in the music tab, I'll put a header paragraph talking about how i'll updat
 And below that, put a couple songs and their album pictures. With a blurb for each song talking about what it means to me, if anything. or if i simply enjoy it.
 
 
-make inner thoughts font size same as passions for the headers
+
+
+I'm using masonry.js to achieve that dynamic masonry layout look. The problem is that this is so damn annoying. 
+I have to hardcode the dimensions of each box and test it out to achieve the layout that I want. If I change anything, the whole page gets screwed up and I have to manually adjust everything again. 
+There's probably a better way to do this, but I can't be bothered to look. I'm probably going to limit it to < 10 songs and pictures so that I have less to deal with.
+
+
 
 TODO:
+change homepage slideshow to video
 change title to match header/intro
 Add a way to cut off long blog entries and add a read more button.
 After the text animation finishes in interests, let the media below start fading in 
 add a slideshow of interactive calendars, month by month.
+
+
+
+# blog ideas
+being creative in the process of creating a creative outlet
+learning to love coding

@@ -3,6 +3,8 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    /* background: url("../images/notepad1.jpg")  no-repeat center center;
+    background-size: 100% 120%; */
     font-family: 'Merriweather', serif;
     margin: 0;
     padding: 0;
@@ -16,7 +18,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center content horizontally */
-    padding: 50px; /* Adds space inside the section */
+    padding: 40px; /* Adds space inside the section */
 }
 
 section p {
@@ -52,15 +54,39 @@ section p {
 /*} */
 
 header {
-    background-size: contain; /* Cover the entire header */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    height: 300px; /* Set the height of the header */
+    /* background-size: contain; 
+    background-position: center; */
+    position: relative;
+    /* background-repeat: no-repeat;  */
+    height: 200px; /* Set the height of the header */
     color: white; /* Ensure text is readable against the background */
     text-align: center; /* Center the text horizontally */
     display: flex; /* Use flexbox to center content */
+    align-items: center;
     flex-direction: column; /* Stack content vertically */
     justify-content: center; /* Center content vertically */
-    padding: 20px; /* Optional: add padding around the content */
-    
+    padding: 0px; /* Optional: add padding around the content */
+    gap: 20px; /* Space between the items */
+
 }
+.title-container {
+    display: flex;
+    align-items: baseline;
+    gap: 10px; /* Add some space between h1 and h3 */
+}
+
+header h1 {
+    font-size: 32px; /* Main title size */
+    margin: 0; /* Remove default margin */
+    flex: 1;
+    text-align: center; /* Center text horizontally */}
+
+header h3 {
+        font-size: 12px; /* Smaller size for footnote */
+        margin: 0; /* Remove default margin */
+        display: inline-block;
+        vertical-align: baseline;
+        color: #040404; /* Optional: color for footnote */
+        margin-left: 10px; /* Add some space between h1 and h3 */
+
+    }

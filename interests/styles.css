@@ -31,11 +31,6 @@ section {
     padding: 20px;
 }
 
-/* Header for Projects */
-h2 {
-    color: #251f4b;
-}
-
 /* Intro Header Styles */
 #intro {
     color: #040404;
@@ -44,7 +39,9 @@ h2 {
     display: inline-block;
     /* overflow: hidden; */
 }
+/* .flux-background {
 
+} */
 /* Letter Appearance Delay */
 @keyframes appear {
     from { opacity: 0; }
@@ -67,10 +64,9 @@ h2 {
 
 /* Header Background */
 header {
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 300px;
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    height: 200px;
     color: white;
     text-align: center;
     display: flex;
@@ -120,3 +116,7 @@ nav a:hover {
 .blinking-six-times {
     animation: blink-six-times 2.5s steps(6, end);
 }
+
+ footer {
+    text-align: center;
+ }
