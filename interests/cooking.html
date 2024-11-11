@@ -3,9 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cooking Experiments</title>
+    <title>Food!</title>
+    <link rel="stylesheet" href="cooking.css">
 </head>
 <body>
+    <header>
+            <h1 id="intro">Food!</h1>
+            <h2> My culinary adventures</h2>
+    </header>
     
+    <main>
+        <section class="song-list" data-masonry='{ "fitWidth": true, "itemSelector": ".song-box", "gutter": 35}'>
+               <div class="song-box" data-url="https://open.spotify.com/track/1pJzl0YsxaWj6BbPs1mUuQ?si=6db3ab386b094358">
+                <div class="song-info">
+                    <div class="text-info">
+                        <h2>Guacamole</h2>
+                        <h3 id="artist">September 20, 2024</h3>
+                    </div>
+                    <img src="../images/guac.jpg" alt="Album Cover" class="album-cover">
+                </div>
+                <p>I made my first guac today :) It was very tasty. It consisted of an amalgamation of haas avocados, garlic, roma tomatoes, cilantro, yellow onion, jalapeños, lime juice, and salt.
+                    I decided to eat it with some habanero tortilla chips, but kind of regret that. I'm trying to eat less processed and fried food, and the chips were very salty. In the future, I'm going to eat it with toast, or celery/carrots. Overall, today's guac was a success! 10/10</p>
+            </div>
+
+            <div class="song-box">
+                <img src="../images/festival.png" alt="Promotional Image" class="image-only"  width="350" height="420">
+            </div>
+
+            <div class="song-box" data-url="https://open.spotify.com/track/5zjS49hh8KF7mnbvgUtiJa?si=8cdf86b1ec8045c7">
+                <div class="song-info">
+                    <div class="text-info">
+                        <h2>Heatstroke</h2>
+                        <h3 id="artist">Khalid</h3>
+                    </div>
+                    <img src="../images/heatstroke.png" alt="Album Cover" class="album-cover">
+                </div>
+                <p>Chill song. Especially the ending.Very much a summer song to me.</p>
+            </div>
+
+            <div class="song-box" data-url="https://open.spotify.com/track/1aEsTgCsv8nOjEgyEoRCpS?si=4773cc8d56f849a4">
+                <div class="song-info">
+                    <div class="text-info">
+                        <h2>this is how you fall in love</h2>
+                        <h3 id="artist">Jeremy Zucker, Chelsea Cutler</h3>
+                    </div>
+                    <img src="../images/tishyfil.png" alt="Album Cover" class="album-cover">
+                </div>
+                <p>This song feels so peaceful. I also associate it with Autumn. Such a lovely and cute song.</p>
+            </div>    
+
+            <div class="song-box" data-url="https://open.spotify.com/track/4QfikoJtCEiOj7G5R9m3sP?si=7f3c5d4f1a89460c">
+                <div class="song-info">
+                    <div class="text-info">
+                        <h2>For Life</h2>
+                        <h3 id="artist">Kygo</h3>
+                    </div>
+                    <img src="../images/forlife.png" alt="Album Cover" class="album-cover">
+                </div>
+                <p>This song always make me happy and grateful for life. For familiy and friends. It makes me smile.</p>
+            </div>
+
+            <div class="song-box">
+                <img src="../images/beyond1.jpg" class="image-only"  width="360" height="250">
+            </div>
+
+            
+            <div class="song-box">
+                <img src="../images/beyond3.jpg" class="image-only"  width="380" height="300">
+            </div>
+            
+            <div class="song-box" data-url="https://open.spotify.com/track/0mflMxspEfB0VbI1kyLiAv?si=a3afd10eacfe415c">
+                <div class="song-info">
+                    <div class="text-info">
+                        <h2>Stick Season</h2>
+                        <h3 id="artist">Noah Kahan</h3>
+                    </div>
+                    <img src="../images/stickseason.png" alt="Album Cover" class="album-cover">
+                </div>
+                <p>My friend said she played this song for me a while back, but I don't remember. My first memory of hearing this song was hearing Albert and Emilie singing this in karaoke. I was honestly blown away.</p>
+            </div>
+
+            <div class="song-box">
+                <img src="../images/beyond2.jpg" class="image-only"  width="280" height="350">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Evan</p>
+    </footer>
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script src="music.js"></script> 
 </body>
 </html>
